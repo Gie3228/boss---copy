@@ -1,0 +1,1411 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable type="KIND_SpriteKind" id="mjSE7J|$I3bChRzMz+l_">Player</variable><variable type="KIND_SpriteKind" id="+ge^GBtlrDi*}%w;d]|M">Projectile</variable><variable type="KIND_SpriteKind" id="gC0${}Vy3FJDiDCGy_5x">Food</variable><variable type="KIND_SpriteKind" id="l;ns5]4m_a50K^TC{U/j">Enemy</variable><variable id="JU!aD)__vS$y`Lk$$}YY">mySprite</variable><variable id="?(XbqHD@6GOuiDyf^w:{">mySprite2</variable><variable id="7Syw=WzNp6?+$e((w$c.">Pillar 1</variable><variable id="S6nv@w#u[|ZII5Z7{luA">Pillar 2</variable><variable id="Sm(00`S[2Vua)oAnrHo*">Pillar 3</variable><variable id="Z:hQtU{4=ViqJG8j+79J">Pillar 4</variable><variable id="hJO2Itkx(=;f^YLWcp`.">Pillar 5</variable><variable id="ReNdjZEWY}IxO~1PabP_">Pillar 6</variable><variable id="%YdRy5m*gsmF.}~Y+:ky">Pillar 7</variable><variable id="HNwqsm#;V[Wb=xMG36L7">Pillar 8</variable><variable id="?R;+Ay1*BJcnRR8.jGMj">Pillar 9</variable><variable id=")F5)Dv@Q*%f$yT1fTM1K">Pillar 10</variable><variable id="j*MY/)D%F/VcjPHuf9jQ">Pillar 11</variable><variable id="KpC?=Nc}Qd}k?:fS5{[*">Pillar 12</variable><variable id="$bUg?NKAS{}_E3B5of^R">Pillar 13</variable><variable id="pZl.4D[pXLFKWi]eVbP.">Pillar 14</variable><variable id="haVhcE:~C0g$o~z7iBc3">mySprite3</variable></variables><block type="variables_set" id="^*l.YVi5=K=e]7,N`rXv" disabled-reasons="ORPHANED_BLOCK,MANUALLY_DISABLED" x="360" y="-358"><field name="VAR" id="?(XbqHD@6GOuiDyf^w:{">mySprite2</field><value name="VALUE"><shadow type="math_number" id="N{|[H61klR6RZ!]:V2,Y"><field name="NUM">0</field></shadow><block type="spritescreate" id="@-LfvOIs!m$~4zd*O_JH" disabled-reasons="MANUALLY_DISABLED"><value name="img"><shadow type="screen_image_picker" id="/gf`#H~jQAgCbv.EH2m+" disabled-reasons="MANUALLY_DISABLED"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field><data>{"commentRefs":[],"fieldData":{"img":null}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="Ev;76Sus1rlU;al[6{I;" disabled-reasons="MANUALLY_DISABLED"><field name="MEMBER">Player</field></shadow></value></block></value></block><block type="keyonevent" id="bN0(l;%q}Qf?Nd7S3DmJ" x="-204" y="-284"><field name="button">controller.up</field><field name="event">ControllerButtonEvent.Pressed</field><statement name="HANDLER"><block type="run_image_animation" id="Zb[~PdHyw8kYSMA#c=uH"><value name="sprite"><block type="variables_get" id="v+6}6nAK78jXmInxV]RN"><field name="VAR" id="JU!aD)__vS$y`Lk$$}YY">mySprite</field></block></value><value name="frames"><shadow type="animation_editor" id="W~MUTZX=~|Nl;rUWPSi~"><field name="frames">[img`
+. . . . . . f f f f . . . . . . 
+. . . . f f e e e e f f . . . . 
+. . . f e e e f f e e e f . . . 
+. . f f f f f 2 2 f f f f f . . 
+. . f f e 2 e 2 2 e 2 e f f . . 
+. . f e 2 f 2 f f 2 f 2 e f . . 
+. . f f f 2 2 e e 2 2 f f f . . 
+. f f e f 2 f e e f 2 f e f f . 
+. f e e f f e e e e f e e e f . 
+. . f e e e e e e e e e e f . . 
+. . . f e e e e e e e e f . . . 
+. . e 4 f f f f f f f f 4 e . . 
+. . 4 d f 2 2 2 2 2 2 f d 4 . . 
+. . 4 4 f 4 4 4 4 4 4 f 4 4 . . 
+. . . . . f f f f f f . . . . . 
+. . . . . f f . . f f . . . . . 
+`,img`
+. . . . . . . . . . . . . . . . 
+. . . . . . f f f f . . . . . . 
+. . . . f f e e e e f f . . . . 
+. . . f e e e f f e e e f . . . 
+. . . f f f f 2 2 f f f f . . . 
+. . f f e 2 e 2 2 e 2 e f f . . 
+. . f e 2 f 2 f f f 2 f e f . . 
+. . f f f 2 f e e 2 2 f f f . . 
+. . f e 2 f f e e 2 f e e f . . 
+. f f e f f e e e f e e e f f . 
+. f f e e e e e e e e e e f f . 
+. . . f e e e e e e e e f . . . 
+. . . e f f f f f f f f 4 e . . 
+. . . 4 f 2 2 2 2 2 e d d 4 . . 
+. . . e f f f f f f e e 4 . . . 
+. . . . f f f . . . . . . . . . 
+`,img`
+. . . . . . f f f f . . . . . . 
+. . . . f f e e e e f f . . . . 
+. . . f e e e f f e e e f . . . 
+. . f f f f f 2 2 f f f f f . . 
+. . f f e 2 e 2 2 e 2 e f f . . 
+. . f e 2 f 2 f f 2 f 2 e f . . 
+. . f f f 2 2 e e 2 2 f f f . . 
+. f f e f 2 f e e f 2 f e f f . 
+. f e e f f e e e e f e e e f . 
+. . f e e e e e e e e e e f . . 
+. . . f e e e e e e e e f . . . 
+. . e 4 f f f f f f f f 4 e . . 
+. . 4 d f 2 2 2 2 2 2 f d 4 . . 
+. . 4 4 f 4 4 4 4 4 4 f 4 4 . . 
+. . . . . f f f f f f . . . . . 
+. . . . . f f . . f f . . . . . 
+`,img`
+. . . . . . . . . . . . . . . . 
+. . . . . . f f f f . . . . . . 
+. . . . f f e e e e f f . . . . 
+. . . f e e e f f e e e f . . . 
+. . . f f f f 2 2 f f f f . . . 
+. . f f e 2 e 2 2 e 2 e f f . . 
+. . f e f 2 f f f 2 f 2 e f . . 
+. . f f f 2 2 e e f 2 f f f . . 
+. . f e e f 2 e e f f 2 e f . . 
+. f f e e e f e e e f f e f f . 
+. f f e e e e e e e e e e f f . 
+. . . f e e e e e e e e f . . . 
+. . e 4 f f f f f f f f e . . . 
+. . 4 d d e 2 2 2 2 2 f 4 . . . 
+. . . 4 e e f f f f f f e . . . 
+. . . . . . . . . f f f . . . . 
+`]</field><data>{"commentRefs":[],"fieldData":{"frames":null}}</data></shadow></value><value name="frameInterval"><shadow type="timePicker" id="s!3A=;JK9T$n$Dz}!9d#"><field name="ms">200</field></shadow></value><value name="loop"><shadow type="toggleOnOff" id="z,/(M`J7A(Iyk=gj$Cw="><field name="on">true</field></shadow></value><next><block type="game_control_sprite" id="g*Is@Rpr]z$H-wk3QKIB"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="true"></mutation><value name="sprite"><block type="variables_get" id="G/I0;@|2^H*P=/F)jj#S"><field name="VAR" id="JU!aD)__vS$y`Lk$$}YY">mySprite</field></block></value><value name="vx"><shadow type="spriteSpeedPicker" id=".d,7LJ5,+6DV9QqO=g!7"><field name="speed">100</field></shadow></value><value name="vy"><shadow type="spriteSpeedPicker" id="PzbtWO~KT%wUpk22z@y:"><field name="speed">100</field></shadow></value></block></next></block></statement></block><block type="pxt-on-start" id="HlAV,TGoUf#VQTa^TbE_" x="-877" y="-217"><statement name="HANDLER"><block type="set_current_tilemap" id="+?NVX4~KKtD@k8+8/h$5"><value name="tilemap"><shadow type="tiles_tilemap_editor" id="}[I,x4_LNcVR?74?q64K"><field name="tilemap">tilemap`map`</field><data>{"commentRefs":[],"fieldData":{"tilemap":"level1"}}</data></shadow></value><next><block type="variables_set" id="+=SR3EQ]_exfdcYOC4r%"><field name="VAR" id="JU!aD)__vS$y`Lk$$}YY">mySprite</field><value name="VALUE"><shadow type="math_number" id="1!t=!I97Uwx!O7bCwC3P"><field name="NUM">0</field></shadow><block type="spritescreate" id="Yo5ACPuW_V{N7?R}@A0/"><value name="img"><shadow type="screen_image_picker" id="vNpEg_=~XtXPRIHL!9}U"><field name="img">img`
+. . . . . . f f f f . . . . . . 
+. . . . f f f 2 2 f f f . . . . 
+. . . f f f 2 2 2 2 f f f . . . 
+. . f f f e e e e e e f f f . . 
+. . f f e 2 2 2 2 2 2 e e f . . 
+. . f e 2 f f f f f f 2 e f . . 
+. . f f f f e e e e f f f f . . 
+. f f e f b f 4 4 f b f e f f . 
+. f e e 4 1 f d d f 1 4 e e f . 
+. . f e e d d d d d d e e f . . 
+. . . f e e 4 4 4 4 e e f . . . 
+. . e 4 f 2 2 2 2 2 2 f 4 e . . 
+. . 4 d f 2 2 2 2 2 2 f d 4 . . 
+. . 4 4 f 4 4 5 5 4 4 f 4 4 . . 
+. . . . . f f f f f f . . . . . 
+. . . . . f f . . f f . . . . . 
+`</field><data>{"commentRefs":[],"fieldData":{"img":null}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="h.u?~vs.5jlI;-2|*-{C"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="camerapos" id=".A#G$2^S:p6lgZk?]FXT"><value name="x"><shadow type="math_number" id="A+tj/_mA@0_q?X9I*_ba"><field name="NUM">36</field></shadow><block type="scenescreenwidth" id="+52uNuL:1}L0ts=FhS!w"></block></value><value name="y"><shadow type="math_number" id="WHWn7]$9p,Mj=cU%~`^#"><field name="NUM">36</field></shadow><block type="scenescreenheight" id="XjEUPS{~z#w%eLMPfMuE"></block></value><next><block type="spritesetpos" id="w4)0gbN:jrc6$y-Bpo@J"><value name="sprite"><block type="variables_get" id="pFS~R7y|oKe!,Y][=cA;"><field name="VAR" id="JU!aD)__vS$y`Lk$$}YY">mySprite</field></block></value><value name="x"><shadow type="positionPicker" id="Y{uO!:#%!A@m6mzXu%pZ"><field name="index">22</field></shadow><block type="scenescreenwidth" id="]`6]tWiKcxfxf=@(r}SW"></block></value><value name="y"><shadow type="positionPicker" id="b7lEGh|)BKxX;O;8TqSF"><field name="index">22</field></shadow><block type="scenescreenheight" id="Z2*44m0dha21c,%YPBub"></block></value><next><block type="camerafollow" id="E|OQkK*]H=zk9o(IlGX3"><value name="sprite"><block type="variables_get" id="n^{D|uNy{(?AV89e/lXO"><field name="VAR" id="JU!aD)__vS$y`Lk$$}YY">mySprite</field></block></value></block></next></block></next></block></next></block></next></block></statement></block><block type="keyonevent" id="zI%JEctyH_5hbwfC(};c" x="337" y="-264"><field name="button">controller.left</field><field name="event">ControllerButtonEvent.Pressed</field><statement name="HANDLER"><block type="run_image_animation" id="xz@=y/f^RvxFFjeg5a~T"><value name="sprite"><block type="variables_get" id="@oAKuS_h;+3q)c`P^DtE"><field name="VAR" id="JU!aD)__vS$y`Lk$$}YY">mySprite</field></block></value><value name="frames"><shadow type="animation_editor" id="$%#2o(OR{k2/o]t{!52l"><field name="frames">[img`
+. . . . f f f f f f . . . . . . 
+. . . f 2 f e e e e f f . . . . 
+. . f 2 2 2 f e e e e f f . . . 
+. . f e e e e f f e e e f . . . 
+. f e 2 2 2 2 e e f f f f . . . 
+. f 2 e f f f f 2 2 2 e f . . . 
+. f f f e e e f f f f f f f . . 
+. f e e 4 4 f b e 4 4 e f f . . 
+. . f e d d f 1 4 d 4 e e f . . 
+. . . f d d d d 4 e e e f . . . 
+. . . f e 4 4 4 e e f f . . . . 
+. . . f 2 2 2 e d d 4 . . . . . 
+. . . f 2 2 2 e d d e . . . . . 
+. . . f 5 5 4 f e e f . . . . . 
+. . . . f f f f f f . . . . . . 
+. . . . . . f f f . . . . . . . 
+`,img`
+. . . . . . . . . . . . . . . . 
+. . . . f f f f f f . . . . . . 
+. . . f 2 f e e e e f f . . . . 
+. . f 2 2 2 f e e e e f f . . . 
+. . f e e e e f f e e e f . . . 
+. f e 2 2 2 2 e e f f f f . . . 
+. f 2 e f f f f 2 2 2 e f . . . 
+. f f f e e e f f f f f f f . . 
+. f e e 4 4 f b e 4 4 e f f . . 
+. . f e d d f 1 4 d 4 e e f . . 
+. . . f d d d e e e e e f . . . 
+. . . f e 4 e d d 4 f . . . . . 
+. . . f 2 2 e d d e f . . . . . 
+. . f f 5 5 f e e f f f . . . . 
+. . f f f f f f f f f f . . . . 
+. . . f f f . . . f f . . . . . 
+`,img`
+. . . . f f f f f f . . . . . . 
+. . . f 2 f e e e e f f . . . . 
+. . f 2 2 2 f e e e e f f . . . 
+. . f e e e e f f e e e f . . . 
+. f e 2 2 2 2 e e f f f f . . . 
+. f 2 e f f f f 2 2 2 e f . . . 
+. f f f e e e f f f f f f f . . 
+. f e e 4 4 f b e 4 4 e f f . . 
+. . f e d d f 1 4 d 4 e e f . . 
+. . . f d d d d 4 e e e f . . . 
+. . . f e 4 4 4 e e f f . . . . 
+. . . f 2 2 2 e d d 4 . . . . . 
+. . . f 2 2 2 e d d e . . . . . 
+. . . f 5 5 4 f e e f . . . . . 
+. . . . f f f f f f . . . . . . 
+. . . . . . f f f . . . . . . . 
+`,img`
+. . . . . . . . . . . . . . . . 
+. . . . f f f f f f . . . . . . 
+. . . f 2 f e e e e f f . . . . 
+. . f 2 2 2 f e e e e f f . . . 
+. . f e e e e f f e e e f . . . 
+. f e 2 2 2 2 e e f f f f . . . 
+. f 2 e f f f f 2 2 2 e f . . . 
+. f f f e e e f f f f f f f . . 
+. f e e 4 4 f b e 4 4 e f f . . 
+. . f e d d f 1 4 d 4 e e f . . 
+. . . f d d d d 4 e e e f . . . 
+. . . f e 4 4 4 e d d 4 . . . . 
+. . . f 2 2 2 2 e d d e . . . . 
+. . f f 5 5 4 4 f e e f . . . . 
+. . f f f f f f f f f f . . . . 
+. . . f f f . . . f f . . . . . 
+`]</field><data>{"commentRefs":[],"fieldData":{"frames":null}}</data></shadow></value><value name="frameInterval"><shadow type="timePicker" id="[54j*FWpOWr0JTOCin8t"><field name="ms">200</field></shadow></value><value name="loop"><shadow type="toggleOnOff" id="npy}#iYv{@nV}Pwml:1%"><field name="on">true</field></shadow></value><next><block type="game_control_sprite" id="*7rs/S1bVgth*|-iF+D}"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="true"></mutation><value name="sprite"><block type="variables_get" id="hquEE-A-lG(l?KJ:*uC|"><field name="VAR" id="JU!aD)__vS$y`Lk$$}YY">mySprite</field></block></value><value name="vx"><shadow type="spriteSpeedPicker" id="+AX~M?k:+lT*JUmF){X$"><field name="speed">100</field></shadow></value><value name="vy"><shadow type="spriteSpeedPicker" id="f:g9(16eRCaoj5|KtxP5"><field name="speed">100</field></shadow></value></block></next></block></statement></block><block type="keyonevent" id="GNJA;G,2Em*UR^Of1)n#" x="33" y="-246"><field name="button">controller.down</field><field name="event">ControllerButtonEvent.Pressed</field><statement name="HANDLER"><block type="run_image_animation" id="KW~hqLmBSdlE6$VF-AaT"><value name="sprite"><block type="variables_get" id="@+GuxjQtZ;wx8]dm$-qA"><field name="VAR" id="JU!aD)__vS$y`Lk$$}YY">mySprite</field></block></value><value name="frames"><shadow type="animation_editor" id="E%^modfS|!||4Xsk@$!L"><field name="frames">[img`
+. . . . . . f f f f . . . . . . 
+. . . . f f f 2 2 f f f . . . . 
+. . . f f f 2 2 2 2 f f f . . . 
+. . f f f e e e e e e f f f . . 
+. . f f e 2 2 2 2 2 2 e e f . . 
+. . f e 2 f f f f f f 2 e f . . 
+. . f f f f e e e e f f f f . . 
+. f f e f b f 4 4 f b f e f f . 
+. f e e 4 1 f d d f 1 4 e e f . 
+. . f e e d d d d d d e e f . . 
+. . . f e e 4 4 4 4 e e f . . . 
+. . e 4 f 2 2 2 2 2 2 f 4 e . . 
+. . 4 d f 2 2 2 2 2 2 f d 4 . . 
+. . 4 4 f 4 4 5 5 4 4 f 4 4 . . 
+. . . . . f f f f f f . . . . . 
+. . . . . f f . . f f . . . . . 
+`,img`
+. . . . . . . . . . . . . . . . 
+. . . . . . f f f f . . . . . . 
+. . . . f f f 2 2 f f f . . . . 
+. . . f f f 2 2 2 2 f f f . . . 
+. . f f f e e e e e e f f f . . 
+. . f f e 2 2 2 2 2 2 e e f . . 
+. f f e 2 f f f f f f 2 e f f . 
+. f f f f f e e e e f f f f f . 
+. . f e f b f 4 4 f b f e f . . 
+. . f e 4 1 f d d f 1 4 e f . . 
+. . . f e 4 d d d d 4 e f e . . 
+. . f e f 2 2 2 2 e d d 4 e . . 
+. . e 4 f 2 2 2 2 e d d e . . . 
+. . . . f 4 4 5 5 f e e . . . . 
+. . . . f f f f f f f . . . . . 
+. . . . f f f . . . . . . . . . 
+`,img`
+. . . . . . f f f f . . . . . . 
+. . . . f f f 2 2 f f f . . . . 
+. . . f f f 2 2 2 2 f f f . . . 
+. . f f f e e e e e e f f f . . 
+. . f f e 2 2 2 2 2 2 e e f . . 
+. . f e 2 f f f f f f 2 e f . . 
+. . f f f f e e e e f f f f . . 
+. f f e f b f 4 4 f b f e f f . 
+. f e e 4 1 f d d f 1 4 e e f . 
+. . f e e d d d d d d e e f . . 
+. . . f e e 4 4 4 4 e e f . . . 
+. . e 4 f 2 2 2 2 2 2 f 4 e . . 
+. . 4 d f 2 2 2 2 2 2 f d 4 . . 
+. . 4 4 f 4 4 5 5 4 4 f 4 4 . . 
+. . . . . f f f f f f . . . . . 
+. . . . . f f . . f f . . . . . 
+`,img`
+. . . . . . . . . . . . . . . . 
+. . . . . . f f f f . . . . . . 
+. . . . f f f 2 2 f f f . . . . 
+. . . f f f 2 2 2 2 f f f . . . 
+. . f f f e e e e e e f f f . . 
+. . f e e 2 2 2 2 2 2 e f f . . 
+. f f e 2 f f f f f f 2 e f f . 
+. f f f f f e e e e f f f f f . 
+. . f e f b f 4 4 f b f e f . . 
+. . f e 4 1 f d d f 1 4 e f . . 
+. . e f e 4 d d d d 4 e f . . . 
+. . e 4 d d e 2 2 2 2 f e f . . 
+. . . e d d e 2 2 2 2 f 4 e . . 
+. . . . e e f 5 5 4 4 f . . . . 
+. . . . . f f f f f f f . . . . 
+. . . . . . . . . f f f . . . . 
+`]</field><data>{"commentRefs":[],"fieldData":{"frames":null}}</data></shadow></value><value name="frameInterval"><shadow type="timePicker" id="KIPRS_*rLmIaJ_MHkhd+"><field name="ms">200</field></shadow></value><value name="loop"><shadow type="toggleOnOff" id="T?jz8||o0;diTy?]7#b}"><field name="on">true</field></shadow></value><next><block type="game_control_sprite" id="Y}:]W^gCBK/~Gpw~sEJJ"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="true"></mutation><value name="sprite"><block type="variables_get" id="Z+GjFr@}N_r|Riv~$Yg*"><field name="VAR" id="JU!aD)__vS$y`Lk$$}YY">mySprite</field></block></value><value name="vx"><shadow type="spriteSpeedPicker" id="cuNTU}:Y./gnekdd5[`w"><field name="speed">100</field></shadow></value><value name="vy"><shadow type="spriteSpeedPicker" id="z*X6b6xh+]?GZ;r-F$rb"><field name="speed">100</field></shadow></value></block></next></block></statement></block><block type="keyonevent" id="lR;L9V/*{^^#t}(80qgV" x="681" y="-94"><field name="button">controller.right</field><field name="event">ControllerButtonEvent.Pressed</field><statement name="HANDLER"><block type="run_image_animation" id="(Y^5Iy[.Cx#oE^_(bga]"><value name="sprite"><block type="variables_get" id="DK?@vlcf5))6@6mfFd=G"><field name="VAR" id="JU!aD)__vS$y`Lk$$}YY">mySprite</field></block></value><value name="frames"><shadow type="animation_editor" id="#ggrZArlTNydlVN4E3:8"><field name="frames">[img`
+. . . . . . f f f f f f . . . . 
+. . . . f f e e e e f 2 f . . . 
+. . . f f e e e e f 2 2 2 f . . 
+. . . f e e e f f e e e e f . . 
+. . . f f f f e e 2 2 2 2 e f . 
+. . . f e 2 2 2 f f f f e 2 f . 
+. . f f f f f f f e e e f f f . 
+. . f f e 4 4 e b f 4 4 e e f . 
+. . f e e 4 d 4 1 f d d e f . . 
+. . . f e e e 4 d d d d f . . . 
+. . . . f f e e 4 4 4 e f . . . 
+. . . . . 4 d d e 2 2 2 f . . . 
+. . . . . e d d e 2 2 2 f . . . 
+. . . . . f e e f 4 5 5 f . . . 
+. . . . . . f f f f f f . . . . 
+. . . . . . . f f f . . . . . . 
+`,img`
+. . . . . . . . . . . . . . . . 
+. . . . . . f f f f f f . . . . 
+. . . . f f e e e e f 2 f . . . 
+. . . f f e e e e f 2 2 2 f . . 
+. . . f e e e f f e e e e f . . 
+. . . f f f f e e 2 2 2 2 e f . 
+. . . f e 2 2 2 f f f f e 2 f . 
+. . f f f f f f f e e e f f f . 
+. . f f e 4 4 e b f 4 4 e e f . 
+. . f e e 4 d 4 1 f d d e f . . 
+. . . f e e e e e d d d f . . . 
+. . . . . f 4 d d e 4 e f . . . 
+. . . . . f e d d e 2 2 f . . . 
+. . . . f f f e e f 5 5 f f . . 
+. . . . f f f f f f f f f f . . 
+. . . . . f f . . . f f f . . . 
+`,img`
+. . . . . . f f f f f f . . . . 
+. . . . f f e e e e f 2 f . . . 
+. . . f f e e e e f 2 2 2 f . . 
+. . . f e e e f f e e e e f . . 
+. . . f f f f e e 2 2 2 2 e f . 
+. . . f e 2 2 2 f f f f e 2 f . 
+. . f f f f f f f e e e f f f . 
+. . f f e 4 4 e b f 4 4 e e f . 
+. . f e e 4 d 4 1 f d d e f . . 
+. . . f e e e 4 d d d d f . . . 
+. . . . f f e e 4 4 4 e f . . . 
+. . . . . 4 d d e 2 2 2 f . . . 
+. . . . . e d d e 2 2 2 f . . . 
+. . . . . f e e f 4 5 5 f . . . 
+. . . . . . f f f f f f . . . . 
+. . . . . . . f f f . . . . . . 
+`,img`
+. . . . . . . . . . . . . . . . 
+. . . . . . f f f f f f . . . . 
+. . . . f f e e e e f 2 f . . . 
+. . . f f e e e e f 2 2 2 f . . 
+. . . f e e e f f e e e e f . . 
+. . . f f f f e e 2 2 2 2 e f . 
+. . . f e 2 2 2 f f f f e 2 f . 
+. . f f f f f f f e e e f f f . 
+. . f f e 4 4 e b f 4 4 e e f . 
+. . f e e 4 d 4 1 f d d e f . . 
+. . . f e e e 4 d d d d f . . . 
+. . . . 4 d d e 4 4 4 e f . . . 
+. . . . e d d e 2 2 2 2 f . . . 
+. . . . f e e f 4 4 5 5 f f . . 
+. . . . f f f f f f f f f f . . 
+. . . . . f f . . . f f f . . . 
+`]</field><data>{"commentRefs":[],"fieldData":{"frames":null}}</data></shadow></value><value name="frameInterval"><shadow type="timePicker" id="cfrS0zfrZ8wYcvVKD@Yd"><field name="ms">200</field></shadow></value><value name="loop"><shadow type="toggleOnOff" id="Il(tNbib?by2@|/r?;R*"><field name="on">true</field></shadow></value><next><block type="game_control_sprite" id="XIuxM(:!m8/z|Dyvuj[+"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="true"></mutation><value name="sprite"><block type="variables_get" id="8EA~f?0pTFYijZtE?I1%"><field name="VAR" id="JU!aD)__vS$y`Lk$$}YY">mySprite</field></block></value><value name="vx"><shadow type="spriteSpeedPicker" id="t1P@~[;mrL8ox]Hi/COp"><field name="speed">100</field></shadow></value><value name="vy"><shadow type="spriteSpeedPicker" id="]%6On7Prp=jVZU,xmc10"><field name="speed">100</field></shadow></value></block></next></block></statement></block><block type="game_control_sprite" id="j$ZAZTS5Cpt%257EF:Nf" disabled-reasons="ORPHANED_BLOCK,MANUALLY_DISABLED" x="0" y="0"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="true"></mutation><value name="sprite"><block type="variables_get" id=")Xa=ZG!ViIzhxd+7dw-a" disabled-reasons="MANUALLY_DISABLED"><field name="VAR" id="JU!aD)__vS$y`Lk$$}YY">mySprite</field></block></value><value name="vx"><shadow type="spriteSpeedPicker" id="4`z0IYjH)^Y@xU1gi8Ny" disabled-reasons="MANUALLY_DISABLED"><field name="speed">100</field></shadow></value><value name="vy"><shadow type="spriteSpeedPicker" id="HoI0W-@=uek.~+Z?ASsb" disabled-reasons="MANUALLY_DISABLED"><field name="speed">100</field></shadow></value></block><block type="spriteshittile" id="wwg8Mg^Ldp?9MmH)dvqg" x="36" y="175"><value name="HANDLER_DRAG_PARAM_sprite"><block type="argument_reporter_custom" id="D8W~@~0@F_+jP_.VPOcT"><mutation duplicateondrag="true" typename="Sprite"></mutation><field name="VALUE">sprite</field></block></value><value name="kind"><shadow type="spritekind" id="|!/!_6j()_s?bB|1uN`~"><field name="MEMBER">Player</field></shadow></value><value name="tile"><shadow type="tileset_tile_picker" id="b4zmpYesLc]~l.3_H*hn"><field name="tile">sprites.dungeon.collectibleRedCrystal</field></shadow></value><value name="HANDLER_DRAG_PARAM_location"><block type="argument_reporter_custom" id="!)iLF0~{7R{$0l#Ambbl"><mutation duplicateondrag="true" typename="tiles.Location"></mutation><field name="VALUE">location</field></block></value><statement name="HANDLER"><block type="spritesetpos" id="5bUuYX:POut@*N{_5SC*"><value name="sprite"><block type="variables_get" id="E%3:GP.HocJ`){Zk`aSw"><field name="VAR" id="JU!aD)__vS$y`Lk$$}YY">mySprite</field></block></value><value name="x"><shadow type="positionPicker" id=")w`V`b7FE[+ewUahs8`x"><field name="index">22</field></shadow></value><value name="y"><shadow type="positionPicker" id="_OWNDYVo~lXX=*1Va:EF"><field name="index">135</field></shadow></value><next><block type="variables_set" id=":jF3JkKP9)C2HTi*6H3;"><field name="VAR" id="7Syw=WzNp6?+$e((w$c.">Pillar 1</field><value name="VALUE"><shadow type="math_number" id="/FZ}#vyUg)lci5zQ:YHB"><field name="NUM">0</field></shadow><block type="spritescreate" id="D%]JDRCHk]eDFFQvL{[K"><value name="img"><shadow type="screen_image_picker" id="RL+L3[U+7-(md*3m[8+-"><field name="img">img`
+445454545554444445
+555555555555554455
+554544545455554445
+455554555454444555
+555555544555455545
+554444554454455544
+454555544455455545
+554555454545455545
+555455554455455545
+454545544555545545
+555454445555545445
+455545555445454555
+545455554555445454
+454554454554555545
+555455555554555455
+455445455545544455
+555455545545554544
+455554455545554554
+555455545544545554
+455555455455545545
+554555555455545545
+555555454454544545
+545455455545544455
+545445555545544455
+455545545455544555
+555545545455544554
+554454545455545544
+555554545444544545
+455555555545555545
+554545555554555545
+555544454554444545
+545454554555455444
+445555545555455455
+455555444554455555
+444554555444554455
+455445454445554545
+545555544545545455
+555554544545545555
+555455445545455455
+555554445444554445
+445454545445554545
+555555445455554444
+555454455445554454
+455545455445455454
+544445454445555454
+545544444555554455
+455455444554554555
+555445555555554555
+555455545455554445
+545455455455444554
+555455555454445554
+445554555454455554
+455455555554555554
+555554545554555455
+555555555544555455
+554555555544555555
+545454545555555455
+555555445545555555
+454554445545545455
+555554545554455554
+545454544554445555
+545454554545544455
+554455554554444455
+555445545545555555
+445555455554445455
+554555555545555554
+545555444444445555
+545455555555554545
+555545554555545555
+454454555555545545
+545455544445444555
+554544445544455555
+554445555554554555
+`</field><data>{"commentRefs":[],"fieldData":{"img":null}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="PVXR!BLhN|!k=FULkUvu"><field name="MEMBER">Projectile</field></shadow></value></block></value><next><block type="variables_set" id="49q{025Ze1w7Icvsit-B"><field name="VAR" id="S6nv@w#u[|ZII5Z7{luA">Pillar 2</field><value name="VALUE"><shadow type="math_number" id="LWcIC@NXpHIua!BCGhDr"><field name="NUM">0</field></shadow><block type="spritescreate" id="CcI@Og#$VNF~FKL(4b37"><value name="img"><shadow type="screen_image_picker" id="hjvp):VP}3L-q/X=:io("><field name="img">img`
+445454545554444445
+555555555555554455
+554544545455554445
+455554555454444555
+555555544555455545
+554444554454455544
+454555544455455545
+554555454545455545
+555455554455455545
+454545544555545545
+555454445555545445
+455545555445454555
+545455554555445454
+454554454554555545
+555455555554555455
+455445455545544455
+555455545545554544
+455554455545554554
+555455545544545554
+455555455455545545
+554555555455545545
+555555454454544545
+545455455545544455
+545445555545544455
+455545545455544555
+555545545455544554
+554454545455545544
+555554545444544545
+455555555545555545
+554545555554555545
+555544454554444545
+545454554555455444
+445555545555455455
+455555444554455555
+444554555444554455
+455445454445554545
+545555544545545455
+555554544545545555
+555455445545455455
+555554445444554445
+445454545445554545
+555555445455554444
+555454455445554454
+455545455445455454
+544445454445555454
+545544444555554455
+455455444554554555
+555445555555554555
+555455545455554445
+545455455455444554
+555455555454445554
+445554555454455554
+455455555554555554
+555554545554555455
+555555555544555455
+554555555544555555
+545454545555555455
+555555445545555555
+454554445545545455
+555554545554455554
+545454544554445555
+545454554545544455
+554455554554444455
+555445545545555555
+445555455554445455
+554555555545555554
+545555444444445555
+545455555555554545
+555545554555545555
+454454555555545545
+545455544445444555
+554544445544455555
+554445555554554555
+`</field><data>{"commentRefs":[],"fieldData":{"img":null}}</data></shadow></value><value name="kind"><shadow type="spritekind" id=",e`CX,bajHeWE,PBI~K."><field name="MEMBER">Projectile</field></shadow></value></block></value><next><block type="variables_set" id="}RPBwq?!}r[jRY,D(D`]"><field name="VAR" id="Sm(00`S[2Vua)oAnrHo*">Pillar 3</field><value name="VALUE"><shadow type="math_number" id="9ScbkpRKyrZbp=,sDKc+"><field name="NUM">0</field></shadow><block type="spritescreate" id="da{iUdIyj2zU%`bpV,DJ"><value name="img"><shadow type="screen_image_picker" id="qk~?uqT]KC{vj#BVG,tO"><field name="img">img`
+445454545554444445
+555555555555554455
+554544545455554445
+455554555454444555
+555555544555455545
+554444554454455544
+454555544455455545
+554555454545455545
+555455554455455545
+454545544555545545
+555454445555545445
+455545555445454555
+545455554555445454
+454554454554555545
+555455555554555455
+455445455545544455
+555455545545554544
+455554455545554554
+555455545544545554
+455555455455545545
+554555555455545545
+555555454454544545
+545455455545544455
+545445555545544455
+455545545455544555
+555545545455544554
+554454545455545544
+555554545444544545
+455555555545555545
+554545555554555545
+555544454554444545
+545454554555455444
+445555545555455455
+455555444554455555
+444554555444554455
+455445454445554545
+545555544545545455
+555554544545545555
+555455445545455455
+555554445444554445
+445454545445554545
+555555445455554444
+555454455445554454
+455545455445455454
+544445454445555454
+545544444555554455
+455455444554554555
+555445555555554555
+555455545455554445
+545455455455444554
+555455555454445554
+445554555454455554
+455455555554555554
+555554545554555455
+555555555544555455
+554555555544555555
+545454545555555455
+555555445545555555
+454554445545545455
+555554545554455554
+545454544554445555
+545454554545544455
+554455554554444455
+555445545545555555
+445555455554445455
+554555555545555554
+545555444444445555
+545455555555554545
+555545554555545555
+454454555555545545
+545455544445444555
+554544445544455555
+554445555554554555
+`</field><data>{"commentRefs":[],"fieldData":{"img":null}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="C--hOeHo4Yx.a0@VcYYp"><field name="MEMBER">Projectile</field></shadow></value></block></value><next><block type="variables_set" id=":=(w(H[MOaTi+RsfKuwJ"><field name="VAR" id="Z:hQtU{4=ViqJG8j+79J">Pillar 4</field><value name="VALUE"><shadow type="math_number" id="rDmqmb:B#p9Ty2pV]LCn"><field name="NUM">0</field></shadow><block type="spritescreate" id="WAm4.UrsYW-]GA|@*En~"><value name="img"><shadow type="screen_image_picker" id="%Hi,p#k{N2Xp=H[z$pB%"><field name="img">img`
+445454545554444445
+555555555555554455
+554544545455554445
+455554555454444555
+555555544555455545
+554444554454455544
+454555544455455545
+554555454545455545
+555455554455455545
+454545544555545545
+555454445555545445
+455545555445454555
+545455554555445454
+454554454554555545
+555455555554555455
+455445455545544455
+555455545545554544
+455554455545554554
+555455545544545554
+455555455455545545
+554555555455545545
+555555454454544545
+545455455545544455
+545445555545544455
+455545545455544555
+555545545455544554
+554454545455545544
+555554545444544545
+455555555545555545
+554545555554555545
+555544454554444545
+545454554555455444
+445555545555455455
+455555444554455555
+444554555444554455
+455445454445554545
+545555544545545455
+555554544545545555
+555455445545455455
+555554445444554445
+445454545445554545
+555555445455554444
+555454455445554454
+455545455445455454
+544445454445555454
+545544444555554455
+455455444554554555
+555445555555554555
+555455545455554445
+545455455455444554
+555455555454445554
+445554555454455554
+455455555554555554
+555554545554555455
+555555555544555455
+554555555544555555
+545454545555555455
+555555445545555555
+454554445545545455
+555554545554455554
+545454544554445555
+545454554545544455
+554455554554444455
+555445545545555555
+445555455554445455
+554555555545555554
+545555444444445555
+545455555555554545
+555545554555545555
+454454555555545545
+545455544445444555
+554544445544455555
+554445555554554555
+`</field><data>{"commentRefs":[],"fieldData":{"img":null}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="/9o[R}Nuq%w^Gcd?_ZZ}"><field name="MEMBER">Projectile</field></shadow></value></block></value><next><block type="variables_set" id="9)dd|Rzs];;Rz{sbluwe"><field name="VAR" id="hJO2Itkx(=;f^YLWcp`.">Pillar 5</field><value name="VALUE"><shadow type="math_number" id="!OYbnn6SM2w4OTP?7js%"><field name="NUM">0</field></shadow><block type="spritescreate" id="xQJeHY3w%eaJkKUrvYt("><value name="img"><shadow type="screen_image_picker" id="L2+nO%,Tn5*bwX~C_wG#"><field name="img">img`
+445454545554444445
+555555555555554455
+554544545455554445
+455554555454444555
+555555544555455545
+554444554454455544
+454555544455455545
+554555454545455545
+555455554455455545
+454545544555545545
+555454445555545445
+455545555445454555
+545455554555445454
+454554454554555545
+555455555554555455
+455445455545544455
+555455545545554544
+455554455545554554
+555455545544545554
+455555455455545545
+554555555455545545
+555555454454544545
+545455455545544455
+545445555545544455
+455545545455544555
+555545545455544554
+554454545455545544
+555554545444544545
+455555555545555545
+554545555554555545
+555544454554444545
+545454554555455444
+445555545555455455
+455555444554455555
+444554555444554455
+455445454445554545
+545555544545545455
+555554544545545555
+555455445545455455
+555554445444554445
+445454545445554545
+555555445455554444
+555454455445554454
+455545455445455454
+544445454445555454
+545544444555554455
+455455444554554555
+555445555555554555
+555455545455554445
+545455455455444554
+555455555454445554
+445554555454455554
+455455555554555554
+555554545554555455
+555555555544555455
+554555555544555555
+545454545555555455
+555555445545555555
+454554445545545455
+555554545554455554
+545454544554445555
+545454554545544455
+554455554554444455
+555445545545555555
+445555455554445455
+554555555545555554
+545555444444445555
+545455555555554545
+555545554555545555
+454454555555545545
+545455544445444555
+554544445544455555
+554445555554554555
+`</field><data>{"commentRefs":[],"fieldData":{"img":null}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="QUbgJa/fr^-9zE^/rd3L"><field name="MEMBER">Projectile</field></shadow></value></block></value><next><block type="variables_set" id="^{S.xs4A`7gwgZfBh4?8"><field name="VAR" id="ReNdjZEWY}IxO~1PabP_">Pillar 6</field><value name="VALUE"><shadow type="math_number" id="tN/rype*TSIBB@A]A=N="><field name="NUM">0</field></shadow><block type="spritescreate" id="`=}:M6,[LIizk[AreM%,"><value name="img"><shadow type="screen_image_picker" id=":X584HW3*hE6{T=Qb;iX"><field name="img">img`
+445454545554444445
+555555555555554455
+554544545455554445
+455554555454444555
+555555544555455545
+554444554454455544
+454555544455455545
+554555454545455545
+555455554455455545
+454545544555545545
+555454445555545445
+455545555445454555
+545455554555445454
+454554454554555545
+555455555554555455
+455445455545544455
+555455545545554544
+455554455545554554
+555455545544545554
+455555455455545545
+554555555455545545
+555555454454544545
+545455455545544455
+545445555545544455
+455545545455544555
+555545545455544554
+554454545455545544
+555554545444544545
+455555555545555545
+554545555554555545
+555544454554444545
+545454554555455444
+445555545555455455
+455555444554455555
+444554555444554455
+455445454445554545
+545555544545545455
+555554544545545555
+555455445545455455
+555554445444554445
+445454545445554545
+555555445455554444
+555454455445554454
+455545455445455454
+544445454445555454
+545544444555554455
+455455444554554555
+555445555555554555
+555455545455554445
+545455455455444554
+555455555454445554
+445554555454455554
+455455555554555554
+555554545554555455
+555555555544555455
+554555555544555555
+545454545555555455
+555555445545555555
+454554445545545455
+555554545554455554
+545454544554445555
+545454554545544455
+554455554554444455
+555445545545555555
+445555455554445455
+554555555545555554
+545555444444445555
+545455555555554545
+555545554555545555
+454454555555545545
+545455544445444555
+554544445544455555
+554445555554554555
+`</field><data>{"commentRefs":[],"fieldData":{"img":null}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="71[-R@z.=!!w]y3~wvU("><field name="MEMBER">Projectile</field></shadow></value></block></value><next><block type="variables_set" id="ZRrI5z3WGln-5)NBaod0"><field name="VAR" id="%YdRy5m*gsmF.}~Y+:ky">Pillar 7</field><value name="VALUE"><shadow type="math_number" id=";1dCokFwaKm@cq.7Lp,!"><field name="NUM">0</field></shadow><block type="spritescreate" id="ccLI,UJUz7(I.k#hi)K("><value name="img"><shadow type="screen_image_picker" id="u.f`d!{h-bf+Edsks%ZA"><field name="img">img`
+445454545554444445
+555555555555554455
+554544545455554445
+455554555454444555
+555555544555455545
+554444554454455544
+454555544455455545
+554555454545455545
+555455554455455545
+454545544555545545
+555454445555545445
+455545555445454555
+545455554555445454
+454554454554555545
+555455555554555455
+455445455545544455
+555455545545554544
+455554455545554554
+555455545544545554
+455555455455545545
+554555555455545545
+555555454454544545
+545455455545544455
+545445555545544455
+455545545455544555
+555545545455544554
+554454545455545544
+555554545444544545
+455555555545555545
+554545555554555545
+555544454554444545
+545454554555455444
+445555545555455455
+455555444554455555
+444554555444554455
+455445454445554545
+545555544545545455
+555554544545545555
+555455445545455455
+555554445444554445
+445454545445554545
+555555445455554444
+555454455445554454
+455545455445455454
+544445454445555454
+545544444555554455
+455455444554554555
+555445555555554555
+555455545455554445
+545455455455444554
+555455555454445554
+445554555454455554
+455455555554555554
+555554545554555455
+555555555544555455
+554555555544555555
+545454545555555455
+555555445545555555
+454554445545545455
+555554545554455554
+545454544554445555
+545454554545544455
+554455554554444455
+555445545545555555
+445555455554445455
+554555555545555554
+545555444444445555
+545455555555554545
+555545554555545555
+454454555555545545
+545455544445444555
+554544445544455555
+554445555554554555
+`</field><data>{"commentRefs":[],"fieldData":{"img":null}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="zkfONr/4F3(ciqo!(kIf"><field name="MEMBER">Projectile</field></shadow></value></block></value><next><block type="variables_set" id=",7k8Ui_+Ja%xk#Ox=zVz"><field name="VAR" id="HNwqsm#;V[Wb=xMG36L7">Pillar 8</field><value name="VALUE"><shadow type="math_number" id="TJA5Zm3R:j=UjS`tlk(0"><field name="NUM">0</field></shadow><block type="spritescreate" id="h7_GQ$p4h|o].@!.YWT1"><value name="img"><shadow type="screen_image_picker" id="l+GIF5LE4rcs$b*`m{-p"><field name="img">img`
+445454545554444445
+555555555555554455
+554544545455554445
+455554555454444555
+555555544555455545
+554444554454455544
+454555544455455545
+554555454545455545
+555455554455455545
+454545544555545545
+555454445555545445
+455545555445454555
+545455554555445454
+454554454554555545
+555455555554555455
+455445455545544455
+555455545545554544
+455554455545554554
+555455545544545554
+455555455455545545
+554555555455545545
+555555454454544545
+545455455545544455
+545445555545544455
+455545545455544555
+555545545455544554
+554454545455545544
+555554545444544545
+455555555545555545
+554545555554555545
+555544454554444545
+545454554555455444
+445555545555455455
+455555444554455555
+444554555444554455
+455445454445554545
+545555544545545455
+555554544545545555
+555455445545455455
+555554445444554445
+445454545445554545
+555555445455554444
+555454455445554454
+455545455445455454
+544445454445555454
+545544444555554455
+455455444554554555
+555445555555554555
+555455545455554445
+545455455455444554
+555455555454445554
+445554555454455554
+455455555554555554
+555554545554555455
+555555555544555455
+554555555544555555
+545454545555555455
+555555445545555555
+454554445545545455
+555554545554455554
+545454544554445555
+545454554545544455
+554455554554444455
+555445545545555555
+445555455554445455
+554555555545555554
+545555444444445555
+545455555555554545
+555545554555545555
+454454555555545545
+545455544445444555
+554544445544455555
+554445555554554555
+`</field><data>{"commentRefs":[],"fieldData":{"img":null}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="Vn1.gn2jQm-J!Ogggd[C"><field name="MEMBER">Projectile</field></shadow></value></block></value><next><block type="variables_set" id="ycaFMOfjGRvZ,))yeU+a"><field name="VAR" id="?R;+Ay1*BJcnRR8.jGMj">Pillar 9</field><value name="VALUE"><shadow type="math_number" id="==%~I9dnTcl=r4$l!jJ*"><field name="NUM">0</field></shadow><block type="spritescreate" id="(T=K.WeC$31Fd=8,4W.6"><value name="img"><shadow type="screen_image_picker" id=")wg(R_TccyE*eQ{$ZHyy"><field name="img">img`
+445454545554444445
+555555555555554455
+554544545455554445
+455554555454444555
+555555544555455545
+554444554454455544
+454555544455455545
+554555454545455545
+555455554455455545
+454545544555545545
+555454445555545445
+455545555445454555
+545455554555445454
+454554454554555545
+555455555554555455
+455445455545544455
+555455545545554544
+455554455545554554
+555455545544545554
+455555455455545545
+554555555455545545
+555555454454544545
+545455455545544455
+545445555545544455
+455545545455544555
+555545545455544554
+554454545455545544
+555554545444544545
+455555555545555545
+554545555554555545
+555544454554444545
+545454554555455444
+445555545555455455
+455555444554455555
+444554555444554455
+455445454445554545
+545555544545545455
+555554544545545555
+555455445545455455
+555554445444554445
+445454545445554545
+555555445455554444
+555454455445554454
+455545455445455454
+544445454445555454
+545544444555554455
+455455444554554555
+555445555555554555
+555455545455554445
+545455455455444554
+555455555454445554
+445554555454455554
+455455555554555554
+555554545554555455
+555555555544555455
+554555555544555555
+545454545555555455
+555555445545555555
+454554445545545455
+555554545554455554
+545454544554445555
+545454554545544455
+554455554554444455
+555445545545555555
+445555455554445455
+554555555545555554
+545555444444445555
+545455555555554545
+555545554555545555
+454454555555545545
+545455544445444555
+554544445544455555
+554445555554554555
+`</field><data>{"commentRefs":[],"fieldData":{"img":null}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="Wxh2WzN/=6J5Yuqqdluq"><field name="MEMBER">Projectile</field></shadow></value></block></value><next><block type="variables_set" id="Rg@?d3fK{JL1faN3MDz1"><field name="VAR" id=")F5)Dv@Q*%f$yT1fTM1K">Pillar 10</field><value name="VALUE"><shadow type="math_number" id="|:hZ8^|XO^nX@_0iXE]z"><field name="NUM">0</field></shadow><block type="spritescreate" id="8k3(4NB7CGRahy~K9|F0"><value name="img"><shadow type="screen_image_picker" id="MnQ$#WBkN~.vpyW}IFAt"><field name="img">img`
+445454545554444445
+555555555555554455
+554544545455554445
+455554555454444555
+555555544555455545
+554444554454455544
+454555544455455545
+554555454545455545
+555455554455455545
+454545544555545545
+555454445555545445
+455545555445454555
+545455554555445454
+454554454554555545
+555455555554555455
+455445455545544455
+555455545545554544
+455554455545554554
+555455545544545554
+455555455455545545
+554555555455545545
+555555454454544545
+545455455545544455
+545445555545544455
+455545545455544555
+555545545455544554
+554454545455545544
+555554545444544545
+455555555545555545
+554545555554555545
+555544454554444545
+545454554555455444
+445555545555455455
+455555444554455555
+444554555444554455
+455445454445554545
+545555544545545455
+555554544545545555
+555455445545455455
+555554445444554445
+445454545445554545
+555555445455554444
+555454455445554454
+455545455445455454
+544445454445555454
+545544444555554455
+455455444554554555
+555445555555554555
+555455545455554445
+545455455455444554
+555455555454445554
+445554555454455554
+455455555554555554
+555554545554555455
+555555555544555455
+554555555544555555
+545454545555555455
+555555445545555555
+454554445545545455
+555554545554455554
+545454544554445555
+545454554545544455
+554455554554444455
+555445545545555555
+445555455554445455
+554555555545555554
+545555444444445555
+545455555555554545
+555545554555545555
+454454555555545545
+545455544445444555
+554544445544455555
+554445555554554555
+`</field><data>{"commentRefs":[],"fieldData":{"img":null}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="@UU?w_Hzf!RGnd,Ym-s-"><field name="MEMBER">Projectile</field></shadow></value></block></value><next><block type="variables_set" id="?}=p9k]MN:lregPb$Q-o"><field name="VAR" id="j*MY/)D%F/VcjPHuf9jQ">Pillar 11</field><value name="VALUE"><shadow type="math_number" id="TpHxtdV]SD?jxg/|r|rc"><field name="NUM">0</field></shadow><block type="spritescreate" id="SEA*1%fZUiVY%-r9rbDQ"><value name="img"><shadow type="screen_image_picker" id="dw/gv19xcgHqE{75EyH/"><field name="img">img`
+445454545554444445
+555555555555554455
+554544545455554445
+455554555454444555
+555555544555455545
+554444554454455544
+454555544455455545
+554555454545455545
+555455554455455545
+454545544555545545
+555454445555545445
+455545555445454555
+545455554555445454
+454554454554555545
+555455555554555455
+455445455545544455
+555455545545554544
+455554455545554554
+555455545544545554
+455555455455545545
+554555555455545545
+555555454454544545
+545455455545544455
+545445555545544455
+455545545455544555
+555545545455544554
+554454545455545544
+555554545444544545
+455555555545555545
+554545555554555545
+555544454554444545
+545454554555455444
+445555545555455455
+455555444554455555
+444554555444554455
+455445454445554545
+545555544545545455
+555554544545545555
+555455445545455455
+555554445444554445
+445454545445554545
+555555445455554444
+555454455445554454
+455545455445455454
+544445454445555454
+545544444555554455
+455455444554554555
+555445555555554555
+555455545455554445
+545455455455444554
+555455555454445554
+445554555454455554
+455455555554555554
+555554545554555455
+555555555544555455
+554555555544555555
+545454545555555455
+555555445545555555
+454554445545545455
+555554545554455554
+545454544554445555
+545454554545544455
+554455554554444455
+555445545545555555
+445555455554445455
+554555555545555554
+545555444444445555
+545455555555554545
+555545554555545555
+454454555555545545
+545455544445444555
+554544445544455555
+554445555554554555
+`</field><data>{"commentRefs":[],"fieldData":{"img":null}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="}.:zeh56^MGYs@rGG/E$"><field name="MEMBER">Projectile</field></shadow></value></block></value><next><block type="variables_set" id="j~Z+Q6YMEJ.e[!)iB#wH"><field name="VAR" id="KpC?=Nc}Qd}k?:fS5{[*">Pillar 12</field><value name="VALUE"><shadow type="math_number" id="c=_oOpA(15TveQxnV1tV"><field name="NUM">0</field></shadow><block type="spritescreate" id="W[{,k9ox,reZ~%7i~Vxp"><value name="img"><shadow type="screen_image_picker" id="RpzzDga0OW$Ue}[jMPO1"><field name="img">img`
+445454545554444445
+555555555555554455
+554544545455554445
+455554555454444555
+555555544555455545
+554444554454455544
+454555544455455545
+554555454545455545
+555455554455455545
+454545544555545545
+555454445555545445
+455545555445454555
+545455554555445454
+454554454554555545
+555455555554555455
+455445455545544455
+555455545545554544
+455554455545554554
+555455545544545554
+455555455455545545
+554555555455545545
+555555454454544545
+545455455545544455
+545445555545544455
+455545545455544555
+555545545455544554
+554454545455545544
+555554545444544545
+455555555545555545
+554545555554555545
+555544454554444545
+545454554555455444
+445555545555455455
+455555444554455555
+444554555444554455
+455445454445554545
+545555544545545455
+555554544545545555
+555455445545455455
+555554445444554445
+445454545445554545
+555555445455554444
+555454455445554454
+455545455445455454
+544445454445555454
+545544444555554455
+455455444554554555
+555445555555554555
+555455545455554445
+545455455455444554
+555455555454445554
+445554555454455554
+455455555554555554
+555554545554555455
+555555555544555455
+554555555544555555
+545454545555555455
+555555445545555555
+454554445545545455
+555554545554455554
+545454544554445555
+545454554545544455
+554455554554444455
+555445545545555555
+445555455554445455
+554555555545555554
+545555444444445555
+545455555555554545
+555545554555545555
+454454555555545545
+545455544445444555
+554544445544455555
+554445555554554555
+`</field><data>{"commentRefs":[],"fieldData":{"img":null}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="}$p8hG]{:5Gu*F2Xu|$v"><field name="MEMBER">Projectile</field></shadow></value></block></value><next><block type="variables_set" id="C=HA!;VRHu=xv2Fx%exL"><field name="VAR" id="$bUg?NKAS{}_E3B5of^R">Pillar 13</field><value name="VALUE"><shadow type="math_number" id="sg?cfgclWVs-OER6OGB)"><field name="NUM">0</field></shadow><block type="spritescreate" id="=ARJh_Op!7F[p?s%0)U-"><value name="img"><shadow type="screen_image_picker" id="DlT,){!kpr]]j+{QjD/R"><field name="img">img`
+445454545554444445
+555555555555554455
+554544545455554445
+455554555454444555
+555555544555455545
+554444554454455544
+454555544455455545
+554555454545455545
+555455554455455545
+454545544555545545
+555454445555545445
+455545555445454555
+545455554555445454
+454554454554555545
+555455555554555455
+455445455545544455
+555455545545554544
+455554455545554554
+555455545544545554
+455555455455545545
+554555555455545545
+555555454454544545
+545455455545544455
+545445555545544455
+455545545455544555
+555545545455544554
+554454545455545544
+555554545444544545
+455555555545555545
+554545555554555545
+555544454554444545
+545454554555455444
+445555545555455455
+455555444554455555
+444554555444554455
+455445454445554545
+545555544545545455
+555554544545545555
+555455445545455455
+555554445444554445
+445454545445554545
+555555445455554444
+555454455445554454
+455545455445455454
+544445454445555454
+545544444555554455
+455455444554554555
+555445555555554555
+555455545455554445
+545455455455444554
+555455555454445554
+445554555454455554
+455455555554555554
+555554545554555455
+555555555544555455
+554555555544555555
+545454545555555455
+555555445545555555
+454554445545545455
+555554545554455554
+545454544554445555
+545454554545544455
+554455554554444455
+555445545545555555
+445555455554445455
+554555555545555554
+545555444444445555
+545455555555554545
+555545554555545555
+454454555555545545
+545455544445444555
+554544445544455555
+554445555554554555
+`</field><data>{"commentRefs":[],"fieldData":{"img":null}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="N^sflr%!?J0)96A57|EX"><field name="MEMBER">Projectile</field></shadow></value></block></value><next><block type="variables_set" id="npNO]a#y=sY2Wkc;;(}5"><field name="VAR" id="pZl.4D[pXLFKWi]eVbP.">Pillar 14</field><value name="VALUE"><shadow type="math_number" id="@TN{BT9Oq/[`)/!,}?96"><field name="NUM">0</field></shadow><block type="spritescreate" id="`Xsd2b/UwZ5?IBbM]4?|"><value name="img"><shadow type="screen_image_picker" id="vAkWxD+_AgFY^ML)sh/V"><field name="img">img`
+445454545554444445
+555555555555554455
+554544545455554445
+455554555454444555
+555555544555455545
+554444554454455544
+454555544455455545
+554555454545455545
+555455554455455545
+454545544555545545
+555454445555545445
+455545555445454555
+545455554555445454
+454554454554555545
+555455555554555455
+455445455545544455
+555455545545554544
+455554455545554554
+555455545544545554
+455555455455545545
+554555555455545545
+555555454454544545
+545455455545544455
+545445555545544455
+455545545455544555
+555545545455544554
+554454545455545544
+555554545444544545
+455555555545555545
+554545555554555545
+555544454554444545
+545454554555455444
+445555545555455455
+455555444554455555
+444554555444554455
+455445454445554545
+545555544545545455
+555554544545545555
+555455445545455455
+555554445444554445
+445454545445554545
+555555445455554444
+555454455445554454
+455545455445455454
+544445454445555454
+545544444555554455
+455455444554554555
+555445555555554555
+555455545455554445
+545455455455444554
+555455555454445554
+445554555454455554
+455455555554555554
+555554545554555455
+555555555544555455
+554555555544555555
+545454545555555455
+555555445545555555
+454554445545545455
+555554545554455554
+545454544554445555
+545454554545544455
+554455554554444455
+555445545545555555
+445555455554445455
+554555555545555554
+545555444444445555
+545455555555554545
+555545554555545555
+454454555555545545
+545455544445444555
+554544445544455555
+554445555554554555
+`</field><data>{"commentRefs":[],"fieldData":{"img":null}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="h9|FzNzb4vB^7~EeIoxW"><field name="MEMBER">Projectile</field></shadow></value></block></value><next><block type="spritesetpos" id="v|OW8o0[X$)92SGHva.Q"><value name="sprite"><block type="variables_get" id="D$i1pW[2Wo;5UNO*wCB^"><field name="VAR" id="7Syw=WzNp6?+$e((w$c.">Pillar 1</field></block></value><value name="x"><shadow type="positionPicker" id="-oIia6LPWfFjy81R5|t@"><field name="index">133</field></shadow></value><value name="y"><shadow type="positionPicker" id="J77E5Z,+njY/4z~~lr)y"><field name="index">12</field></shadow></value><next><block type="spritesetpos" id="=z$?6!%dHpj90^6I78XM"><value name="sprite"><block type="variables_get" id="yNQ*kFW=|+TNueg+wI9c"><field name="VAR" id="S6nv@w#u[|ZII5Z7{luA">Pillar 2</field></block></value><value name="x"><shadow type="positionPicker" id="8pT@@f=a@wGEI-LNuXAQ"><field name="index">266</field></shadow></value><value name="y"><shadow type="positionPicker" id="0Jq]dT@vpb[3B2wv0(l3"><field name="index">12</field></shadow></value><next><block type="spritesetpos" id="%C*]ry9x]C`=Tjk+blL="><value name="sprite"><block type="variables_get" id="QwJ6+XYzOwE,=Ty2eHiR"><field name="VAR" id="Sm(00`S[2Vua)oAnrHo*">Pillar 3</field></block></value><value name="x"><shadow type="positionPicker" id="H]-L+fp]gtZK$NSX=|-;"><field name="index">399</field></shadow></value><value name="y"><shadow type="positionPicker" id="udJFLw%!1aAbi-H)x+:="><field name="index">12</field></shadow></value><next><block type="spritesetpos" id="RjkVJN5$`dy|}]7R#$em"><value name="sprite"><block type="variables_get" id="Fgd-?OdJb$dU{Dw/IgAg"><field name="VAR" id="Z:hQtU{4=ViqJG8j+79J">Pillar 4</field></block></value><value name="x"><shadow type="positionPicker" id="qcaenRCbnKC785~di/}W"><field name="index">532</field></shadow></value><value name="y"><shadow type="positionPicker" id="nof*-28#sWtC5;G^k0vR"><field name="index">12</field></shadow></value><next><block type="spritesetpos" id="{FCTJn@3b9YUE6W6@UHR"><value name="sprite"><block type="variables_get" id="fppa9ne1]|k~U-KVM+4f"><field name="VAR" id="hJO2Itkx(=;f^YLWcp`.">Pillar 5</field></block></value><value name="x"><shadow type="positionPicker" id="?,|_:a5St}-[WhXe@v04"><field name="index">665</field></shadow></value><value name="y"><shadow type="positionPicker" id="J1!WsTcLDX=9b?ZBdO_U"><field name="index">12</field></shadow></value><next><block type="spritesetpos" id="C!BnRw!UBP.4:yF=[L16"><value name="sprite"><block type="variables_get" id="vrP[,w!ky9DL%]E9d-;3"><field name="VAR" id="ReNdjZEWY}IxO~1PabP_">Pillar 6</field></block></value><value name="x"><shadow type="positionPicker" id=";]aO;#{k!sJ9|dpjf{rN"><field name="index">798</field></shadow></value><value name="y"><shadow type="positionPicker" id="tmV:i^=g4j$??uW)uA=e"><field name="index">12</field></shadow></value><next><block type="spritesetpos" id="CM3D9V5BSu{i}Myl|jMn"><value name="sprite"><block type="variables_get" id="ew4%eu+m([54a@V_pFyQ"><field name="VAR" id="%YdRy5m*gsmF.}~Y+:ky">Pillar 7</field></block></value><value name="x"><shadow type="positionPicker" id="b6?IbWkv_;P;O[#G~jm~"><field name="index">931</field></shadow></value><value name="y"><shadow type="positionPicker" id="f=^3#F|lR)[+lbrf[1:9"><field name="index">12</field></shadow></value><next><block type="spritesetpos" id="F`:[5`?-MAw1_xgb.!ls"><value name="sprite"><block type="variables_get" id="uN@d?H4[@;G3.#]%v3WY"><field name="VAR" id="HNwqsm#;V[Wb=xMG36L7">Pillar 8</field></block></value><value name="x"><shadow type="positionPicker" id="k]Kk$vfS[MpIjpX62:xr"><field name="index">931</field></shadow></value><value name="y"><shadow type="positionPicker" id="u}Kt]mZlq4z$u}R20^dZ"><field name="index">178</field></shadow></value><next><block type="spritesetpos" id="V0p{w3$,tXTE!5=jMdcL"><value name="sprite"><block type="variables_get" id="8ouY[w1B5nX-THI#9~kX"><field name="VAR" id="?R;+Ay1*BJcnRR8.jGMj">Pillar 9</field></block></value><value name="x"><shadow type="positionPicker" id="7.d5vKK,^F-9s`4Y[BEo"><field name="index">798</field></shadow></value><value name="y"><shadow type="positionPicker" id="oK01K5mldETn6djAh519"><field name="index">178</field></shadow></value><next><block type="spritesetpos" id="j|RW{!$^PUvQ@T!tf6$)"><value name="sprite"><block type="variables_get" id="r(2=z]?`7-cjhC?:2j[R"><field name="VAR" id=")F5)Dv@Q*%f$yT1fTM1K">Pillar 10</field></block></value><value name="x"><shadow type="positionPicker" id="SQ5EyZ[|m)b)6?Rz7pyr"><field name="index">665</field></shadow></value><value name="y"><shadow type="positionPicker" id="f}3yF1dJd@6wS[D:=#l?"><field name="index">178</field></shadow></value><next><block type="spritesetpos" id="~r#PL1/WN{%z@pa;Kmm!"><value name="sprite"><block type="variables_get" id="!d[dE4)e^vmqLOu}T}_0"><field name="VAR" id="j*MY/)D%F/VcjPHuf9jQ">Pillar 11</field></block></value><value name="x"><shadow type="positionPicker" id="cbpd_,*^@jp;Z?(DlyX."><field name="index">532</field></shadow></value><value name="y"><shadow type="positionPicker" id="3)/:n82H_}F@0v0`Q))i"><field name="index">178</field></shadow></value><next><block type="spritesetpos" id="n.u?OOCv$T;6lfI8f-Zq"><value name="sprite"><block type="variables_get" id="vAY:;pbKVy3Iws8)xN.x"><field name="VAR" id="KpC?=Nc}Qd}k?:fS5{[*">Pillar 12</field></block></value><value name="x"><shadow type="positionPicker" id="yZ#{D|X/fkT-Jm7Q6_Ze"><field name="index">399</field></shadow></value><value name="y"><shadow type="positionPicker" id="M%,RwLp`+x[_A-HXfotB"><field name="index">178</field></shadow></value><next><block type="spritesetpos" id="/d3/4.Ne/6-3/.wzy%t#"><value name="sprite"><block type="variables_get" id="NFI)Fvnp{VhCuvLP*hoN"><field name="VAR" id="$bUg?NKAS{}_E3B5of^R">Pillar 13</field></block></value><value name="x"><shadow type="positionPicker" id="9bDslpeL/W^J/GP_7UI/"><field name="index">266</field></shadow></value><value name="y"><shadow type="positionPicker" id="tw[*=pmXe_^.dA5$Z`O|"><field name="index">178</field></shadow></value><next><block type="spritesetpos" id="()-~pA6jAY[}R+fZw:M9"><value name="sprite"><block type="variables_get" id="7{;D2uQ^UbAp?S9XBxv]"><field name="VAR" id="pZl.4D[pXLFKWi]eVbP.">Pillar 14</field></block></value><value name="x"><shadow type="positionPicker" id="gZ7_k.PR8+oEO6k~kRD5"><field name="index">133</field></shadow></value><value name="y"><shadow type="positionPicker" id=":XE}Ioj/qz~ePY2r([t%"><field name="index">178</field></shadow></value><next><block type="set_current_tilemap" id="1X#z.aJ^`c9/u%/5QSu3"><value name="tilemap"><shadow type="tiles_tilemap_editor" id="#wJHxJ*1y_M(GVu#chLY"><field name="tilemap">tilemap`level2`</field><data>{"commentRefs":[],"fieldData":{"tilemap":"level2"}}</data></shadow></value></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></statement></block><block type="variables_set" id="6ZbzKGTk]8/nemwcwE-X" disabled-reasons="ORPHANED_BLOCK,MANUALLY_DISABLED" x="-13" y="695"><field name="VAR" id="Z:hQtU{4=ViqJG8j+79J">Pillar 4</field><value name="VALUE"><shadow type="math_number" id=";aZYi606P_5EhQo*{~CC" disabled-reasons="MANUALLY_DISABLED"><field name="NUM">0</field></shadow></value></block><block type="spriteshittile" id="II*syZ-e^}Kl%}_wEYP!" x="732" y="865"><value name="HANDLER_DRAG_PARAM_sprite"><block type="argument_reporter_custom" id="Zl7DH?Dr{t^H;y3r[NE%"><mutation duplicateondrag="true" typename="Sprite"></mutation><field name="VALUE">sprite</field></block></value><value name="kind"><shadow type="spritekind" id="I*}QStLH_4[!v}6BC3)j"><field name="MEMBER">Player</field></shadow></value><value name="tile"><shadow type="tileset_tile_picker" id="@sj#)gZI-p)g7FumU]jW"><field name="tile">assets.tile`myTile3`</field></shadow></value><value name="HANDLER_DRAG_PARAM_location"><block type="argument_reporter_custom" id="6pmV}cP7#^1.Q0kZZOoS"><mutation duplicateondrag="true" typename="tiles.Location"></mutation><field name="VALUE">location</field></block></value><statement name="HANDLER"><block type="variables_set" id="1[6-#/ipOTg(;,;Ffo`p"><field name="VAR" id="haVhcE:~C0g$o~z7iBc3">mySprite3</field><value name="VALUE"><shadow type="math_number" id="+ldSgFcgGPAfT@?Y^P3R"><field name="NUM">0</field></shadow><block type="spritescreate" id="?vaG@sL3s(yk)cR{x$X]"><value name="img"><shadow type="screen_image_picker" id="SVfFhG.s:`zP%f=3P}3;"><field name="img">img`
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+...........................................
+`</field><data>{"commentRefs":[],"fieldData":{"img":null}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="pm[)M/PP#E~Vp3|#j!X;"><field name="MEMBER">Player</field></shadow></value></block></value></block></statement></block></xml>
